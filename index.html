@@ -17,34 +17,62 @@
   </head>
   <body>
     <div id="app">
-      <header class="sm:bg-white">
-        <div
-          class="max-w-960 mx-auto p-8 sm:flex sm:items-center sm:justify-between"
-        >
-          <div class="flex items-center justify-start">
-            <a href="#" class="p-2 bg-gray-900 text-gray-100 font-semibold"
-              >Hire Expert</a
-            ><span class="ml-2">dev</span>
+      <header class="bg-white">
+        <div class="max-w-960 mx-auto p-8" x-data="{ open: false }">
+          <div class="flex items-center justify-between w-full">
+            <div class="flex items-center justify-between">
+              <a
+                href="#"
+                class="py-1 px-2 bg-gray-900 text-gray-100 font-semibold"
+                >Hire Expert</a
+              ><span class="ml-2">dev</span>
+            </div>
+            <button class="p-1 sm:hidden" @click="open = true">
+              <svg
+                class="h-8 w-8"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="far"
+                data-icon="bars"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"
+                ></path>
+              </svg>
+            </button>
+            <nav class="mt-8 sm:mt-0 hover:text-gray-500 hidden sm:flex">
+              <ul class="sm:flex items-center justify-center">
+                <li class="sm:mx-4">
+                  <a href="#" class="flex leading-loose hover:text-gray-900"
+                    >Work</a
+                  >
+                </li>
+                <li class="sm:mx-4">
+                  <a href="#" class="flex leading-loose hover:text-gray-900"
+                    >Solutions</a
+                  >
+                </li>
+                <li class="sm:mx-4">
+                  <a href="#" class="flex leading-loose hover:text-gray-900"
+                    >Open Source</a
+                  >
+                </li>
+                <li class="sm:mx-4">
+                  <a href="#" class="flex leading-loose hover:text-gray-900"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
           </div>
-          <button class="p-1">
-            <svg
-              class="h-8 w-8"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="far"
-              data-icon="bars"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <path
-                fill="currentColor"
-                d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"
-              ></path>
-            </svg>
-          </button>
           <nav
-            class="mt-8 sm:mt-0 hover:text-gray-500 pb-8 sm:pb-0 border-b sm:border-none border-gray-500"
+            class="mt-8 sm:mt-0 hover:text-gray-500"
+            x-show="open"
+            @click.away="open = false"
           >
             <ul class="sm:flex items-center justify-center">
               <li class="sm:mx-4">
@@ -76,8 +104,352 @@
         class="bg-cover bg-center bg-auto relative"
         style="background-image: url(/img/he-home-banner.jpg);"
       >
-        <div>fds</div>
+        <div
+          class="bg-indigo-900 opacity-50 absolute top-0 left-0 h-full w-full"
+        ></div>
+        <div class="max-w-960 mx-auto p-8 text-white relative">
+          <div class="pt-48 sm:py-40">
+            <h1 class="text-4xl xl:text-6xl font-serif">Work on demand</h1>
+            <p class="text-xl sm:text-2xl border-l-4 pl-4 border-gray-500">
+              We design, develop & deploy websites & web applications<br
+                class="hidden sm:flex"
+              />
+              using Laravel, React & Vue.
+            </p>
+          </div>
+        </div>
       </section>
+      <section class="py-16">
+        <div class="max-w-960 mx-auto">
+          <div class="p-8">
+            <h3 class="text-3xl font-serif">Make it easier</h3>
+            <p class="text-base pb-8 text-gray-700">
+              Drive complete solutions for your websites & web applications.
+            </p>
+            <div
+              class="flex flex-wrap md:flex-no-wrap items-start justify-start"
+            >
+              <div class="sm:w-1/2 md:1/3 pb-8 md:pb-0 sm:pr-2">
+                <div class="max-w-sm rounded overflow-hidden">
+                  <img
+                    class="w-full h-48 object-cover"
+                    src="/img/design.jpg"
+                    alt="Sunset in the mountains"
+                  />
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Design</div>
+                    <p class="text-gray-700 text-base mb-3">
+                      Transforming your applications into intuitive, accessible,
+                      and easy-to-use designs for people around the world.
+                    </p>
+                    <a href="#" class="text-blue-900 hover:text-gray-900"
+                      >Read more</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="sm:w-1/2 md:1/3 pb-8 md:pb-0 pl-2 md:px-2">
+                <div class="max-w-sm rounded overflow-hidden">
+                  <img
+                    class="w-full h-48 object-cover"
+                    src="/img/develop.jpg"
+                    alt="Sunset in the mountains"
+                  />
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Develop</div>
+                    <p class="text-gray-700 text-base mb-3">
+                      Crafting and securing applications with best and latest
+                      technologies to bring the most value for the business.
+                      Delivering self-scalable applications with cloud
+                      technologies.
+                    </p>
+                    <a href="#" class="text-blue-900 hover:text-gray-900"
+                      >Read more</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sm:w-1/2 md:1/3 pb-8 md:pb-0 pl-0 pr-2 md:pl-2 md:pr-0"
+              >
+                <div class="max-w-sm rounded overflow-hidden">
+                  <img
+                    class="w-full h-48 object-cover"
+                    src="/img/deploy.jpg"
+                    alt="Sunset in the mountains"
+                  />
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Deploy</div>
+                    <p class="text-gray-700 text-base mb-3">
+                      Lunching products with best social media marketing
+                      techniques. Deploying applications into play stores and
+                      cloud with automated systems.
+                    </p>
+                    <a href="#" class="text-blue-900 hover:text-gray-900"
+                      >Read more</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 bg-white">
+        <div class="max-w-960 mx-auto">
+          <div class="p-8">
+            <h3 class="text-3xl font-serif">We love what we do</h3>
+            <p class="text-base pb-8 text-gray-700">
+              Converge on a favorable set of requirements for clientele.
+            </p>
+            <div>
+              Delivering digital transformation with latest technologies.
+              Building a difference within your competitors with artificial and
+              business intelligence to stand top of the class. Researching on
+              business growth and leading–edge technologies. Gaining a massive
+              conversion using UX/UI design techniques which thrive users to get
+              back to the business continuously.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16">
+        <div class="max-w-960 mx-auto">
+          <div class="p-8">
+            <h3 class="text-3xl font-serif">Let's do it</h3>
+            <p class="text-base pb-8 text-gray-700">
+              Let us know what you want & we will deliver to your door.
+            </p>
+            <div class="flex flex-wrap items-center justify-start">
+              <div class="w-full sm:w-1/2 pb-8 sm:pr-4">
+                <input
+                  class="shadow appearance-none border rounded w-full py-4 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+                  id="email"
+                  type="text"
+                  placeholder="Email address"
+                />
+              </div>
+              <div class="w-full sm:w-1/2 pb-8 sm:pl-4">
+                <input
+                  class="shadow appearance-none border rounded w-full py-4 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+                  id="name"
+                  type="text"
+                  placeholder="Name"
+                />
+              </div>
+              <div class="w-full pb-8">
+                <textarea
+                  class="shadow appearance-none border rounded w-full py-4 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+                  id="message"
+                  type="text"
+                  placeholder="Message"
+                  rows="5"
+                ></textarea>
+              </div>
+              <div class="w-full text-right">
+                <button
+                  class="bg-gray-900 hover:bg-gray-700 text-white font-bold py-4 px-4 rounded w-full sm:w-auto"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="py-16 bg-gray-900 text-gray-100">
+        <div class="max-w-960 mx-auto">
+          <div class="p-8">
+            <div class="flex-wrap flex items-start justify-center">
+              <div class="w-full md:w-1/3 mb-8">
+                <div class="flex items-center justify-start">
+                  <a
+                    href="#"
+                    class="py-1 px-2 bg-gray-100 text-gray-900 font-semibold"
+                    >Hire Expert</a
+                  ><span class="ml-2 text-gray-100">dev</span>
+                </div>
+              </div>
+              <div class="w-full md:w-2/3">
+                <div class="flex flex-wrap items-start justiy-center md:mb-8">
+                  <div class="w-full mb-8 md:mb-0 md:w-1/3">
+                    <div class="text-sm font-semibold mb-8">DESGIN</div>
+                    <ul class="hover:text-gray-500">
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Logos</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Mobile Apps</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Web Apps</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >eCommerce Apps</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Game Design</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Business Cards</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Brochures</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Canvas & Banners</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Packages</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="w-full mb-8 md:mb-0 md:w-1/3">
+                    <div class="text-sm font-semibold mb-8">DEVELOP</div>
+                    <ul class="hover:text-gray-500">
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Web Development</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Mobile Apps</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Hybird Mobile Apps</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >eCommerce Solutions</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Game Development</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Startup Solutions</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Progressive Web Apps</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Accelerated Mobile Pages</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Apps Monetization</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Apps Analytics
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="w-full mb-8 md:mb-0 md:w-1/3">
+                    <div class="text-sm font-semibold mb-8">DEPLOY</div>
+                    <ul class="hover:text-gray-500">
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Amazon Web Services</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Google Cloud Platform</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Microsoft Cloud Platform</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Apple App Store</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Android Play Store</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flex items-start justiy-center">
+                  <div class="w-1/3">
+                    <div class="text-sm font-semibold mb-8">ABOUT US</div>
+                    <ul class="hover:text-gray-500">
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Contact</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Los Angeles, CA</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="w-1/3">
+                    <div class="text-sm font-semibold mb-8">MORE</div>
+                    <ul class="hover:text-gray-500">
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >GitHub</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Twitter</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-gray-100 leading-loose"
+                          >Facebook</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
