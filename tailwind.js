@@ -1,4 +1,5 @@
 module.exports = {
+  purge: ["./*.html"],
   theme: {
     fontFamily: {
       sans: ["Source Sans Pro", "sans-serif"],
