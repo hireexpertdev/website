@@ -14,7 +14,7 @@ require("laravel-mix-workbox");
  */
 
 mix
-  .ts("src/app.ts", "dist/")
+  .js("src/app.js", "dist/")
   .sass("src/app.scss", "dist/")
   .tailwind()
   .options({
