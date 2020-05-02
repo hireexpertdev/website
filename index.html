@@ -27,7 +27,11 @@
                 >Hire Expert</a
               ><span class="ml-2">dev</span>
             </div>
-            <button class="p-1 sm:hidden" @click="open = true">
+            <button
+              aria-label="Navigation Menu"
+              class="p-1 sm:hidden"
+              @click="open = true"
+            >
               <svg
                 class="h-8 w-8"
                 aria-hidden="true"
@@ -254,6 +258,7 @@
               </div>
               <div class="w-full text-right">
                 <button
+                  aria-label="Send message"
                   class="bg-gray-900 hover:bg-gray-700 text-white font-bold py-4 px-4 rounded w-full sm:w-auto"
                 >
                   Send
