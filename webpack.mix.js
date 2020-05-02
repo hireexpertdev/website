@@ -1,5 +1,6 @@
 let mix = require("laravel-mix");
 require("laravel-mix-tailwind");
+require("laravel-mix-workbox");
 
 /*
  |--------------------------------------------------------------------------
@@ -20,7 +21,8 @@ mix
     processCssUrls: true, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
     purifyCss: false, // Remove unused CSS selectors.
   })
-  .minify("dist/app.css");
+  .minify("dist/app.css")
+  .generateSW();
 
 // Full API
 // mix.js(src, output);
