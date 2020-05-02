@@ -15,8 +15,12 @@ require("laravel-mix-tailwind");
 mix
   // .ts("src/app.ts", "dist/")
   .sass("src/app.scss", "dist/")
-  .tailwind();
-// .minify("dist/app.css");
+  .tailwind()
+  .options({
+    processCssUrls: true, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
+    purifyCss: true, // Remove unused CSS selectors.
+  })
+  .minify("dist/app.css");
 
 // Full API
 // mix.js(src, output);
