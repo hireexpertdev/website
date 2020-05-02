@@ -51,7 +51,7 @@ define("./service-worker.js", ["./workbox-1bbb3e0e"], function(e) {
     e.precacheAndRoute(
       [
         { url: "/dist/app.css", revision: "b4fbb467edf60a2c07dbe01c29fb79cd" },
-        { url: "/index.html", revision: "c94d8a9a873a3130d5778b9049580700" },
+        { url: "/dist/app.js", revision: "c94d8a9a873a3130d5778b9049580700" },
       ],
       {}
     );
