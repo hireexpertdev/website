@@ -13,9 +13,10 @@ require("laravel-mix-tailwind");
  */
 
 mix
-  .js("src/app.ts", "dist/")
+  // .ts("src/app.ts", "dist/")
   .sass("src/app.scss", "dist/")
   .tailwind();
+// .minify("dist/app.css");
 
 // Full API
 // mix.js(src, output);
