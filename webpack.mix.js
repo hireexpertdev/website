@@ -18,7 +18,7 @@ mix
   .tailwind()
   .options({
     processCssUrls: true, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
-    purifyCss: true, // Remove unused CSS selectors.
+    purifyCss: false, // Remove unused CSS selectors.
   })
   .minify("dist/app.css");
 
