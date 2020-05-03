@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/app.js":
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./src/app.scss":
 /*!**********************!*\
   !*** ./src/app.scss ***!
@@ -97,25 +108,14 @@
 
 /***/ }),
 
-/***/ "./src/app.ts":
-/*!********************!*\
-  !*** ./src/app.ts ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ 0:
 /*!*****************************************!*\
-  !*** multi ./src/app.ts ./src/app.scss ***!
+  !*** multi ./src/app.js ./src/app.scss ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/rxprep/Sarthak/hireexpert/src/app.ts */"./src/app.ts");
+__webpack_require__(/*! /Users/rxprep/Sarthak/hireexpert/src/app.js */"./src/app.js");
 module.exports = __webpack_require__(/*! /Users/rxprep/Sarthak/hireexpert/src/app.scss */"./src/app.scss");
 
 
